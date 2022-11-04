@@ -1,1 +1,5 @@
-echo "welcome"
+From ubuntu
+RUN apt-get update
+RUN apt-get update -yq install net=tools nginx
+EXPOSE 80
+ENTRYPOINT ["/usr/sbin/nginx", "-g", "daemon off;"]
